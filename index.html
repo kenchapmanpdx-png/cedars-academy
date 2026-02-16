@@ -69,15 +69,23 @@
         </div>
       </div>
       <div class="hero-video-wrap">
-        <video autoplay loop muted playsinline>
-          <source
-            src="https://assets.mixkit.co/videos/preview/mixkit-putting-on-makeup-in-front-of-the-mirror-3520-large.mp4"
-            type="video/mp4">
+        <video id="hero-video" autoplay loop muted playsinline>
+          <source src="assets/videos/Video_Generation_With_Diversity.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
     </div>
   </section>
+
+  <script>
+    // Set video playback speed
+    document.addEventListener('DOMContentLoaded', function () {
+      const video = document.getElementById('hero-video');
+      if (video) {
+        video.playbackRate = 0.8;
+      }
+    });
+  </script>
 
 
   <!-- ============ STATS ============ -->
