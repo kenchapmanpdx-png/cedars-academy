@@ -1537,23 +1537,29 @@ select.form-field option {
 }
 
 /* Video Styles */
+/* Video Styles */
 .hero-video-wrap {
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  border: 1px solid var(--border-bright);
-  aspect-ratio: 9/16;
-  height: 100%;
-  max-height: 700px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  z-index: 0;
+  /* Reset previous container styles */
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  aspect-ratio: auto;
+  max-height: none;
+  height: auto;
 }
 
-/* Reddish-black gradient overlay */
+/* Gradient mask to blend video into background */
 .hero-video-wrap::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(139, 32, 32, 0.3));
+  background: linear-gradient(to left, transparent 0%, var(--bg-void) 100%);
   z-index: 10;
   pointer-events: none;
 }
@@ -1564,8 +1570,14 @@ select.form-field option {
   object-fit: cover;
   filter: grayscale(100%);
   /* Black and white filter */
-  transform: scale(1.02);
-  /* Slight scale to prevent edge bleeding */
+  opacity: 0.6;
+  /* Slight transparency to help blend */
+}
+
+/* Ensure content sits above video */
+.hero-split {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-form-wrap {
