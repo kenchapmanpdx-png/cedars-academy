@@ -1540,10 +1540,10 @@ select.form-field option {
 /* Video Styles */
 .hero-video-wrap {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 50%;
+  top: 7.5%;
+  right: 2%;
+  bottom: 7.5%;
+  width: 42%;
   z-index: 0;
   /* Reset previous container styles */
   border-radius: 0;
@@ -1552,14 +1552,18 @@ select.form-field option {
   aspect-ratio: auto;
   max-height: none;
   height: auto;
+
+  /* Radial gradient mask for all-side blending */
+  -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 70%);
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 70%);
 }
 
-/* Gradient mask to blend video into background */
+/* Reddish tint overlay (simplified since mask handles blending) */
 .hero-video-wrap::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to left, transparent 0%, var(--bg-void) 100%);
+  background: radial-gradient(ellipse at center, rgba(139, 32, 32, 0.1) 0%, rgba(139, 32, 32, 0.3) 100%);
   z-index: 10;
   pointer-events: none;
 }
