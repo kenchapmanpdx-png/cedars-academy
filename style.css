@@ -1545,8 +1545,8 @@ select.form-field option {
   bottom: 7.5%;
   width: 42%;
   z-index: 0;
-  /* Maintain rounded shape */
-  border-radius: 60px;
+  /* Maintain rounded shape - increased per user request */
+  border-radius: 200px;
   box-shadow: none;
   border: none;
   aspect-ratio: auto;
