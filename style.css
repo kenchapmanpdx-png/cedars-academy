@@ -1546,16 +1546,17 @@ select.form-field option {
   width: 42%;
   z-index: 0;
   /* Reset previous container styles */
-  border-radius: 0;
+  border-radius: 60px;
+  /* Really rounded corners */
   box-shadow: none;
   border: none;
   aspect-ratio: auto;
   max-height: none;
   height: auto;
 
-  /* Radial gradient mask for all-side blending */
-  -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 70%);
-  mask-image: radial-gradient(ellipse at center, black 40%, transparent 70%);
+  /* Radial gradient mask for all-side blending - relaxed for more rectangular shape */
+  -webkit-mask-image: radial-gradient(ellipse at center, black 60%, transparent 85%);
+  mask-image: radial-gradient(ellipse at center, black 60%, transparent 85%);
 }
 
 /* Reddish tint overlay (simplified since mask handles blending) */
