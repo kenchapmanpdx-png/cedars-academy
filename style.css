@@ -1606,3 +1606,49 @@ select.form-field option {
   margin-top: 40px;
   max-width: 480px;
 }
+
+/* ================================================================
+   ABOUT / SPLIT SECTION
+   ================================================================ */
+.about-section {
+  padding: var(--section-pad);
+  position: relative;
+  background: var(--bg-deep);
+  /* Use deep background to contrast with cards */
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(40px, 6vw, 80px);
+}
+
+.about-image-wrap {
+  position: relative;
+  /* Ensure container doesn't force crop */
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  /* Rounded corners */
+}
+
+.about-image-wrap img {
+  width: 100%;
+  height: auto;
+  /* Natural height */
+  display: block;
+  object-fit: contain;
+  /* Ensure full image is visible */
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile responsive */
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
