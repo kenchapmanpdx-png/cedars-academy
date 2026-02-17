@@ -1550,9 +1550,9 @@ select.form-field option {
 /* Video Styles */
 .hero-video-wrap {
   position: absolute;
-  top: 7.5%;
+  top: 0;
   right: 2%;
-  bottom: 7.5%;
+  bottom: 0;
   width: 42%;
   z-index: 0;
   /* Maintain rounded shape - increased per user request */
