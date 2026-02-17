@@ -43,24 +43,11 @@
           <div class="hero-check"><span class="hc-icon">&#10003;</span> Full Kits Included</div>
         </div>
         <div class="hero-form-wrap">
-          <div class="hero-form">
-            <div class="form-urgency">
-              <span class="urgency-dot"></span>
-              2025 Student Catalog Open
-            </div>
-            <div class="form-title">Book Your Free Campus Tour</div>
-            <div class="form-subtitle">See the studio, meet instructors, and find out if Cedars is right for you.</div>
-            <input type="text" class="form-field" placeholder="Your Full Name">
-            <input type="email" class="form-field" placeholder="Email Address">
-            <input type="tel" class="form-field" placeholder="Phone Number">
-            <select class="form-field">
-              <option value="" disabled selected>Which program interests you?</option>
-              <option>12-Week Certification</option>
-              <option>Permanent Makeup (PMU)</option>
-              <option>Workshops</option>
-            </select>
-            <button class="form-btn">Book My Free Tour &rarr;</button>
-          </div>
+          <!-- Booking Calendar Widget -->
+          <iframe src="https://api.leadconnectorhq.com/widget/booking/7FfUHnx7VMyscm55NApe"
+            style="width: 100%; height: 600px; border:none; overflow: hidden;" scrolling="no"
+            id="lFlTRFrLozmfc06fJ2uF_1771365860501"></iframe>
+          <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
         </div>
       </div>
       <div class="hero-video-wrap">
@@ -189,8 +176,8 @@
         // Close all
         document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
         // Toggle clicked
-        if (!wasOpen) item.classList.add('ope);
- ;
+        if (!wasOpen) item.classList.add('open');
+      });
     });
   </script>
 
