@@ -278,6 +278,8 @@ ul {
 .hero {
   position: relative;
   min-height: 100vh;
+  /* Added min-height to prevent video squash on short content */
+  min-height: 850px;
   display: flex;
   align-items: center;
   padding: 120px clamp(20px, 5vw, 48px) 80px;
