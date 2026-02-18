@@ -1556,9 +1556,15 @@ select.form-field option {
   border-radius: 0;
   overflow: visible;
 
-  /* Smooth left-edge fade to blend into background */
-  -webkit-mask-image: linear-gradient(to right, transparent, black 15%);
-  mask-image: linear-gradient(to right, transparent, black 15%);
+  /* Fade all four edges into the background */
+  -webkit-mask-image:
+    linear-gradient(to right, transparent, black 15%, black 85%, transparent),
+    linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-composite: destination-in;
+  mask-image:
+    linear-gradient(to right, transparent, black 15%, black 85%, transparent),
+    linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  mask-composite: intersect;
 }
 
 /* Optional soft top/bottom fade for extra premium feel */
