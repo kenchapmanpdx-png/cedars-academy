@@ -704,7 +704,9 @@ select.form-field option {
   border-radius: 16px;
   overflow: hidden;
   aspect-ratio: 4/5;
+}
 
+.about-image-wrap.reveal-image {
   /* Scroll-reveal starting state */
   opacity: 0;
   transform: translateY(40px);
@@ -712,7 +714,7 @@ select.form-field option {
 }
 
 /* Triggered by JS IntersectionObserver */
-.about-image-wrap.is-visible {
+.about-image-wrap.reveal-image.is-visible {
   opacity: 1;
   transform: translateY(0);
 }

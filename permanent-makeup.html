@@ -16,7 +16,8 @@
 
     <!-- ============ NAVIGATION ============ -->
     <nav class="nav">
-        <a href="index.html" class="nav-logo"><img src="assets/images/Logo-white.png" alt="Cedars Academy of Beauty"></a>
+        <a href="index.html" class="nav-logo"><img src="assets/images/Logo-white.png"
+                alt="Cedars Academy of Beauty"></a>
         <div class="nav-links">
             <a href="certification.html">Certification</a>
             <a href="permanent-makeup.html">Permanent Makeup</a>
@@ -33,7 +34,8 @@
                 <div class="hero-eyebrow">WA States Only</div>
                 <h1 class="section-title" style="font-size: clamp(40px, 5vw, 64px); margin-bottom: 20px;">10 Week
                     <br><em>Permanent
-                        Makeup</em> Program</h1>
+                        Makeup</em> Program
+                </h1>
 
                 <h2 class="section-title" style="font-size: 32px; margin-bottom: 20px;">Master the Art of <em>PMU</em>
                 </h2>
@@ -57,7 +59,7 @@
                 </div>
             </div>
             <div class="hero-right">
-                <div class="about-image-wrap">
+                <div class="about-image-wrap reveal-image">
                     <img src="assets/images/Permanent Makeup.png" alt="Permanent Makeup Practice" loading="lazy">
                 </div>
             </div>
@@ -181,6 +183,21 @@
             <div class="footer-copy">&copy; 2026 Cedars Academy of Beauty. All rights reserved.</div>
         </div>
     </footer>
+
+    <!-- ============ SCRIPTS ============ -->
+    <script>
+        // Scroll-reveal for images
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.reveal-image').forEach(el => revealObserver.observe(el));
+    </script>
 
 </body>
 
