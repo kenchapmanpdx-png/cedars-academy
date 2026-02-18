@@ -209,8 +209,7 @@ ul {
 
 .nav-logo {
   display: block;
-  width: 180px;
-  /* Adjust based on actual logo aspect ratio */
+  width: 220px;
   height: auto;
 }
 
@@ -218,6 +217,7 @@ ul {
   width: 100%;
   height: auto;
   display: block;
+  mix-blend-mode: screen;
 }
 
 /* 
