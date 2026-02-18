@@ -705,7 +705,82 @@ select.form-field option {
   border-radius: 16px;
   overflow: hidden;
   aspect-ratio: 4/5;
+
+  /* Scroll-reveal starting state */
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
 }
+
+/* Triggered by JS IntersectionObserver */
+.about-image-wrap.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Floating bob animation */
+.about-image-wrap.is-visible img {
+  animation: float-bob 6s ease-in-out infinite;
+}
+
+@keyframes float-bob {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Warm glow behind the image */
+.about-image-glow {
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(ellipse at 60% 70%, rgba(194, 48, 48, 0.25) 0%, rgba(201, 169, 110, 0.1) 50%, transparent 75%);
+  z-index: -1;
+  filter: blur(30px);
+  border-radius: 50%;
+  animation: glow-pulse 4s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+
+  0%,
+  100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+/* Shimmer overlay on hover */
+.about-image-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.04) 50%,
+      transparent 70%);
+  background-size: 200% 200%;
+  background-position: -100% -100%;
+  z-index: 3;
+  transition: background-position 0.6s ease;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.about-image-wrap:hover::before {
+  background-position: 200% 200%;
+}
+
 
 .about-image-wrap img {
   width: 100%;

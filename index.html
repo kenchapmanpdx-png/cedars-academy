@@ -134,7 +134,8 @@
             style="color: var(--red-bright); font-weight: 600; text-decoration: none; margin-top: 20px; display: inline-block;">Read
             Our Story &rarr;</a>
         </div>
-        <div class="about-image-wrap">
+        <div class="about-image-wrap reveal-image">
+          <div class="about-image-glow"></div>
           <img src="assets/images/Certificate.jpeg" alt="Cedars Academy Certification" loading="lazy">
         </div>
       </div>
@@ -182,6 +183,18 @@
 
   <!-- ============ FAQ & MODAL SCRIPT ============ -->
   <script>
+    // Scroll-reveal for about image
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.reveal-image').forEach(el => revealObserver.observe(el));
+
     // FAQ Toggle
     document.querySelectorAll('.faq-question').forEach(btn => {
       btn.addEventListener('click', () => {
