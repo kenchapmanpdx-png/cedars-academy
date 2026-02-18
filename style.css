@@ -278,8 +278,8 @@ ul {
 .hero {
   position: relative;
   min-height: 100vh;
-  /* Added min-height to prevent video squash on short content */
-  min-height: 850px;
+  /* Ensure section is tall enough for portrait video content */
+  min-height: 900px;
   display: flex;
   align-items: center;
   padding: 120px clamp(20px, 5vw, 48px) 80px;
@@ -304,8 +304,9 @@ ul {
 
 .hero-split {
   display: grid;
-  grid-template-columns: 1fr 420px;
-  gap: clamp(40px, 6vw, 80px);
+  /* Give the video side more presence to show full dimensions */
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 8vw, 100px);
   align-items: center;
   max-width: var(--max-w);
   margin: 0 auto;
@@ -1549,18 +1550,25 @@ select.form-field option {
 /* Video Styles */
 /* Video Styles */
 .hero-video-wrap {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 50%;
+  position: relative;
+  width: 100%;
   z-index: 0;
   border-radius: 0;
-  overflow: hidden;
+  overflow: visible;
 
-  /* Single left-edge fade — blends video into the dark background */
-  -webkit-mask-image: linear-gradient(to right, transparent, black 25%);
-  mask-image: linear-gradient(to right, transparent, black 25%);
+  /* Smooth left-edge fade to blend into background */
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%);
+  mask-image: linear-gradient(to right, transparent, black 15%);
+}
+
+/* Optional soft top/bottom fade for extra premium feel */
+.hero-video-wrap::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  box-shadow: inset 0 0 100px 50px var(--bg-void);
+  z-index: 15;
+  pointer-events: none;
 }
 
 /* Reddish tint overlay */
@@ -1568,18 +1576,19 @@ select.form-field option {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, rgba(139, 32, 32, 0.1) 0%, rgba(139, 32, 32, 0.3) 100%);
+  background: radial-gradient(ellipse at center, rgba(139, 32, 32, 0.05) 0%, rgba(139, 32, 32, 0.2) 100%);
   z-index: 10;
   pointer-events: none;
 }
 
+/* The core fix: height auto + width 100% shows the FULL original video dimensions */
 .hero-video-wrap video {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  height: auto;
+  display: block;
+  object-fit: initial;
   filter: grayscale(100%);
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 /* Ensure content sits above video */
