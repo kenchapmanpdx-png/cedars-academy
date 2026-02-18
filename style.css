@@ -197,11 +197,11 @@ ul {
   right: 0;
   z-index: 100;
   padding: 0 clamp(20px, 5vw, 48px);
-  height: 72px;
+  height: 96px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(8, 6, 5, 0.85);
+  background: rgba(8, 6, 5, 0.9);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
@@ -209,7 +209,7 @@ ul {
 
 .nav-logo {
   display: block;
-  width: 220px;
+  width: 185px;
   height: auto;
 }
 
