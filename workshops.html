@@ -2,9 +2,21 @@
 <html lang="en">
 
 <head>
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://link.msgsndr.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; frame-src 'self' https://api.leadconnectorhq.com; connect-src 'self';">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workshops — Cedars Academy</title>
+    <meta name="description"
+        content="Cedars Academy — professional makeup certification, workshops, and PMU training in Vancouver, WA. Enroll now.">
+    <link rel="canonical" href="https://cedarsacademy.com/workshops.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Cedars Academy of Beauty">
+    <meta property="og:description" content="Professional makeup certification, workshops, and PMU training.">
+    <meta property="og:image" content="https://cedarsacademy.com/assets/images/certificate.jpeg">
+    <meta property="og:url" content="https://cedarsacademy.com/workshops.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="assets/images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600;700&display=swap"
@@ -16,7 +28,8 @@
 
     <!-- ============ NAVIGATION ============ -->
     <nav class="nav">
-        <a href="index.html" class="nav-logo"><img src="assets/images/Logo-white.png" alt="Cedars Academy of Beauty"></a>
+        <a href="index.html" class="nav-logo"><img src="assets/images/logo-white.png"
+                alt="Cedars Academy of Beauty"></a>
         <div class="nav-links">
             <a href="certification.html">Certification</a>
             <a href="permanent-makeup.html">Permanent Makeup</a>
@@ -27,7 +40,7 @@
     </nav>
 
     <!-- ============ HERO ============ -->
-    <section class="hero has-noise" style="min-height: 50vh; padding-top: 140px;">
+    <section class="hero has-noise hero-short">
         <div class="container">
             <div class="hero-eyebrow">Short Courses</div>
             <h1 class="section-title">Specialty <em>Workshops</em></h1>
@@ -40,38 +53,37 @@
     <!-- ============ WORKSHOPS LIST ============ -->
     <section class="curriculum-section">
         <div class="container">
-            <div class="about-highlights"
-                style="grid-template-columns: 1fr; gap: 40px; max-width: 800px; margin: 0 auto;">
+            <div class="about-highlights highlights-single-col">
 
                 <!-- Workshop 1 -->
-                <div class="about-highlight" style="display: flex; gap: 30px; align-items: center; padding: 40px;">
-                    <div style="flex-grow: 1;">
-                        <div class="eyebrow" style="margin-bottom: 10px;">March 14, 2026</div>
-                        <h3 class="module-title" style="font-size: 28px;">Makeup Basics</h3>
+                <div class="about-highlight highlight-row">
+                    <div class="flex-1">
+                        <div class="eyebrow mb-10">March 14, 2026</div>
+                        <h3 class="module-title text-28">Makeup Basics</h3>
                         <p class="module-desc">Learn the basics in understanding how to apply makeup to your own face.
                             Perfect for personal learning.</p>
-                        <div style="margin-top: 20px; font-size: 14px; color: var(--gold);">
+                        <div class="text-gold-sm">
                             Saturday &bull; 3:00pm - 6:00pm
                         </div>
                     </div>
                     <div>
-                        <a href="#" class="nav-cta">Register</a>
+                        <button class="nav-cta btn-unstyled">Register</button>
                     </div>
                 </div>
 
                 <!-- Workshop 2 -->
-                <div class="about-highlight" style="display: flex; gap: 30px; align-items: center; padding: 40px;">
-                    <div style="flex-grow: 1;">
-                        <div class="eyebrow" style="margin-bottom: 10px;">Date TBD</div>
-                        <h3 class="module-title" style="font-size: 28px;">SFX Workshop</h3>
+                <div class="about-highlight highlight-row">
+                    <div class="flex-1">
+                        <div class="eyebrow mb-10">Date TBD</div>
+                        <h3 class="module-title text-28">SFX Workshop</h3>
                         <p class="module-desc">Learn entry-level techniques to transform your imagination into a
                             character.</p>
-                        <div style="margin-top: 20px; font-size: 14px; color: var(--gold);">
+                        <div class="text-gold-sm">
                             Coming Soon
                         </div>
                     </div>
                     <div>
-                        <a href="#" class="nav-cta">Join Waitlist</a>
+                        <button class="nav-cta btn-unstyled">Join Waitlist</button>
                     </div>
                 </div>
 
@@ -89,7 +101,7 @@
                 <a href="permanent-makeup.html">PMU</a>
                 <a href="workshops.html">Workshops</a>
                 <a href="about.html">About</a>
-                <a href="#">Contact</a>
+                <a href="mailto:hello@cedarsacademy.com">Contact</a>
             </div>
             <div class="footer-copy">&copy; 2026 Cedars Academy of Beauty. All rights reserved.</div>
         </div>

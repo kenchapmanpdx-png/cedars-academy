@@ -2,9 +2,21 @@
 <html lang="en">
 
 <head>
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' 'unsafe-inline' https://link.msgsndr.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; frame-src 'self' https://api.leadconnectorhq.com; connect-src 'self';">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cedars Academy of Beauty — Professional Makeup Certification</title>
+  <meta name="description"
+    content="Cedars Academy — professional makeup certification, workshops, and PMU training in Vancouver, WA. Enroll now.">
+  <link rel="canonical" href="https://cedarsacademy.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cedars Academy of Beauty">
+  <meta property="og:description" content="Professional makeup certification, workshops, and PMU training.">
+  <meta property="og:image" content="https://cedarsacademy.com/assets/images/certificate.jpeg">
+  <meta property="og:url" content="https://cedarsacademy.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/images/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600;700&display=swap"
@@ -16,7 +28,7 @@
 
   <!-- ============ NAVIGATION ============ -->
   <nav class="nav">
-    <a href="index.html" class="nav-logo"><img src="assets/images/Logo-white.png" alt="Cedars Academy of Beauty"></a>
+    <a href="index.html" class="nav-logo"><img src="assets/images/logo-white.png" alt="Cedars Academy of Beauty"></a>
     <div class="nav-links">
       <a href="certification.html">Certification</a>
       <a href="permanent-makeup.html">Permanent Makeup</a>
@@ -44,31 +56,30 @@
         </div>
         <!-- Booking CTA Button -->
         <div class="hero-cta-wrap">
-          <button class="form-btn" id="openBookingModal" style="max-width: 100%; width: 100%;">Book Your Campus Tour
+          <button class="form-btn w-full" id="openBookingModal">Book Your Campus Tour
             &rarr;</button>
-          <p style="font-size: 13px; color: var(--text-secondary); margin-top: 12px; text-align: center;">
-            <span style="color: var(--green);">&#9679;</span> 2025 Enrollment Open
+          <p class="enrollment-status">
+            <span class="text-green">&#9679;</span> 2025 Enrollment Open
           </p>
         </div>
       </div>
       <div class="hero-video-wrap">
-        <video id="hero-video" autoplay loop muted playsinline>
-          <source src="assets/videos/Galaxy_Video_Generator.mp4" type="video/mp4">
+        <video id="hero-video" autoplay loop muted preload="metadata" poster="assets/images/hero-poster.jpg">
+          <source src="assets/videos/galaxy-video-generator.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
     </div>
 
     <!-- Booking Modal -->
-    <div id="bookingModal" class="modal">
+    <div id="bookingModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="booking-title"
+      aria-hidden="true">
       <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <iframe src="https://api.leadconnectorhq.com/widget/booking/7FfUHnx7VMyscm55NApe"
-          style="width: 100%; height: 600px; border:none; overflow: hidden;" scrolling="no"
-          id="lFlTRFrLozmfc06fJ2uF_1771365860501"></iframe>
-        <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+        <button class="close-modal close-modal-btn" aria-label="Close booking dialog">&times;</button>
+        <div id="bookingContainer" aria-live="polite">
+          <!-- iframe will be inserted here on demand -->
+        </div>
       </div>
-    </div>
     </div>
   </section>
 
@@ -83,7 +94,7 @@
       <div class="curriculum-grid">
 
         <!-- Program 1 -->
-        <a href="certification.html" style="text-decoration: none;">
+        <a href="certification.html" class="program-link">
           <div class="module-card">
             <div class="module-number">01</div>
             <div class="module-title">Professional Certification</div>
@@ -94,7 +105,7 @@
         </a>
 
         <!-- Program 2 -->
-        <a href="permanent-makeup.html" style="text-decoration: none;">
+        <a href="permanent-makeup.html" class="program-link">
           <div class="module-card">
             <div class="module-number">02</div>
             <div class="module-title">Permanent Makeup (PMU)</div>
@@ -105,7 +116,7 @@
         </a>
 
         <!-- Program 3 -->
-        <a href="workshops.html" style="text-decoration: none;">
+        <a href="workshops.html" class="program-link">
           <div class="module-card">
             <div class="module-number">03</div>
             <div class="module-title">Workshops</div>
@@ -130,12 +141,11 @@
             Our curriculum meets state board requirements and industry standards. Your certification from Cedars Academy
             is a mark of excellence recognized by salons, spas, and brands nationwide.
           </p>
-          <a href="about.html"
-            style="color: var(--red-bright); font-weight: 600; text-decoration: none; margin-top: 20px; display: inline-block;">Read
+          <a href="about.html" class="read-more-link">Read
             Our Story &rarr;</a>
         </div>
         <div class="about-image-wrap reveal-image">
-          <img src="assets/images/Certificate.jpeg" alt="Cedars Academy Certification" loading="lazy">
+          <img src="assets/images/certificate.jpeg" alt="Cedars Academy Certification" loading="lazy">
         </div>
       </div>
     </div>
@@ -173,7 +183,7 @@
         <a href="permanent-makeup.html">PMU</a>
         <a href="workshops.html">Workshops</a>
         <a href="about.html">About</a>
-        <a href="#">Contact</a>
+        <a href="mailto:hello@cedarsacademy.com">Contact</a>
       </div>
       <div class="footer-copy">&copy; 2026 Cedars Academy of Beauty. All rights reserved.</div>
     </div>
@@ -182,48 +192,129 @@
 
   <!-- ============ FAQ & MODAL SCRIPT ============ -->
   <script>
-    // Scroll-reveal for about image
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
+    (function () {
+      // Scroll-reveal for about image
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
 
-    document.querySelectorAll('.reveal-image').forEach(el => revealObserver.observe(el));
-
-    // FAQ Toggle
-    document.querySelectorAll('.faq-question').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const item = btn.parentElement;
-        const wasOpen = item.classList.contains('open');
-        // Close all
-        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-        // Toggle clicked
-        if (!wasOpen) item.classList.add('open');
-      });
-    });
-
-    // Booking Modal
-    const modal = document.getElementById("bookingModal");
-    const btn = document.getElementById("openBookingModal");
-    const span = document.getElementsByClassName("close-modal")[0];
-
-    btn.onclick = function () {
-      modal.style.display = "block";
-    }
-
-    span.onclick = function () {
-      modal.style.display = "none";
-    }
-
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
+      const revealEl = document.querySelectorAll('.reveal-image');
+      if (revealEl.length > 0) {
+        revealEl.forEach(el => revealObserver.observe(el));
       }
-    }
+
+      // FAQ Toggle
+      const faqBtns = document.querySelectorAll('.faq-question');
+      if (faqBtns.length > 0) {
+        faqBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const item = btn.parentElement;
+            if (!item) return;
+            const wasOpen = item.classList.contains('open');
+            // Close all
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            // Toggle clicked
+            if (!wasOpen) item.classList.add('open');
+          });
+        });
+      }
+
+      // Booking Modal
+      const modal = document.getElementById('bookingModal');
+      const openBtn = document.getElementById('openBookingModal');
+      const bookingContainer = document.getElementById('bookingContainer');
+      const closeBtn = modal ? modal.querySelector('.close-modal') : null;
+
+      let iframeLoaded = false;
+      let previousActive = null;
+
+      function createIframe() {
+        if (iframeLoaded || !bookingContainer) return;
+        const iframe = document.createElement('iframe');
+        iframe.src = 'https://api.leadconnectorhq.com/widget/booking/7FfUHnx7VMyscm55NApe';
+        iframe.id = 'booking-iframe';
+        iframe.style.width = '100%';
+        iframe.style.height = '600px';
+        iframe.style.border = 'none';
+        iframe.loading = 'lazy';
+        iframe.referrerPolicy = 'no-referrer-when-downgrade';
+        iframe.sandbox = 'allow-scripts allow-forms allow-same-origin allow-popups';
+
+        bookingContainer.innerHTML = '';
+        bookingContainer.appendChild(iframe);
+
+        const s = document.createElement('script');
+        s.src = 'https://link.msgsndr.com/js/form_embed.js';
+        s.defer = true;
+        document.body.appendChild(s);
+
+        iframeLoaded = true;
+      }
+
+      function openModal() {
+        if (!modal) return;
+        previousActive = document.activeElement;
+        modal.style.display = 'block';
+        modal.setAttribute('aria-hidden', 'false');
+        trapFocus(modal);
+        // load iframe only when modal opens
+        createIframe();
+      }
+
+      function closeModal() {
+        if (!modal) return;
+        modal.style.display = 'none';
+        modal.setAttribute('aria-hidden', 'true');
+        releaseFocus();
+        if (previousActive) previousActive.focus();
+      }
+
+      // Basic focus trap
+      let focusable = [];
+      let firstFocusable = null;
+      let lastFocusable = null;
+
+      function trapFocus(root) {
+        focusable = root.querySelectorAll('a[href], button:not([disabled]), textarea, input, select, iframe');
+        if (!focusable.length) return;
+        firstFocusable = focusable[0];
+        lastFocusable = focusable[focusable.length - 1];
+        firstFocusable.focus();
+        document.addEventListener('keydown', handleKeyDown);
+      }
+
+      function releaseFocus() {
+        document.removeEventListener('keydown', handleKeyDown);
+      }
+
+      function handleKeyDown(e) {
+        if (e.key === 'Escape') {
+          closeModal();
+        }
+        if (e.key === 'Tab') {
+          if (e.shiftKey && document.activeElement === firstFocusable) {
+            e.preventDefault();
+            lastFocusable.focus();
+          } else if (!e.shiftKey && document.activeElement === lastFocusable) {
+            e.preventDefault();
+            firstFocusable.focus();
+          }
+        }
+      }
+
+      // safe DOM checks
+      if (openBtn) openBtn.addEventListener('click', openModal);
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+      window.addEventListener('click', (ev) => {
+        if (ev.target === modal) closeModal();
+      });
+    })();
   </script>
 
 </body>
