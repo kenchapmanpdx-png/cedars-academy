@@ -256,6 +256,44 @@ ul {
   color: var(--cream);
 }
 
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold) !important;
+  font-family: var(--font-body);
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 6px 14px;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 20px;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  margin-right: 12px;
+}
+
+.lang-toggle:hover {
+  background-color: rgba(212, 175, 55, 0.1);
+  border-color: var(--gold);
+}
+
+.hero-lang-link {
+  display: block;
+  margin-top: 14px;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  text-decoration: none;
+  text-align: center;
+  transition: color 0.2s;
+}
+
+.hero-lang-link:hover {
+  color: var(--gold);
+  text-decoration: underline;
+}
+
 .nav-cta {
   padding: 10px 28px;
   background: var(--red);
