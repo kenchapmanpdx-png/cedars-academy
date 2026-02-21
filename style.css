@@ -2330,3 +2330,273 @@ select.form-field option {
   margin-top: 12px;
   text-align: center;
 }
+
+/* ============ PRICING ANCHOR LINK ============ */
+.pricing-anchor {
+  display: inline-block;
+  margin-top: 14px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--gold);
+  text-decoration: underline;
+  text-decoration-color: rgba(212, 175, 55, 0.4);
+  text-underline-offset: 3px;
+  transition: opacity 0.2s;
+}
+
+.pricing-anchor:hover {
+  opacity: 0.7;
+}
+
+/* ============ CURRICULUM SKILL LIST ============ */
+.skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+}
+
+.skill-list li {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-secondary);
+  padding: 4px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.5;
+}
+
+.skill-list li::before {
+  content: "✦";
+  color: var(--gold);
+  font-size: 10px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+/* ============ GRADUATE QUOTE BLOCK ============ */
+.grad-quote-section {
+  padding: 80px 0;
+  background: var(--bg-primary);
+}
+
+.grad-quote-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.grad-quote-marks {
+  font-family: var(--font-heading);
+  font-size: 80px;
+  color: var(--gold);
+  line-height: 0.6;
+  display: block;
+  margin-bottom: 24px;
+  opacity: 0.5;
+}
+
+.grad-quote-text {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: clamp(20px, 2.5vw, 28px);
+  color: var(--text-primary);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.grad-quote-attribution {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.grad-quote-photo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  object-fit: cover;
+}
+
+.grad-quote-name {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-primary);
+  font-weight: 600;
+  text-align: left;
+}
+
+.grad-quote-role {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+/* ============ HANDS-ON TWO-COL ============ */
+.hands-on-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-top: 0;
+}
+
+.hands-on-text h3 {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.hands-on-text p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.hands-on-photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.hands-on-photo-grid img,
+.hands-on-photo-placeholder {
+  border-radius: 10px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px dashed var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 12px;
+  text-align: center;
+  padding: 8px;
+}
+
+/* ============ COHORT SEAT BADGE ============ */
+.cohort-size {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 6px;
+  letter-spacing: 0.3px;
+}
+
+.cohort-seats {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--red-bright);
+  font-weight: 600;
+  margin-top: 4px;
+  letter-spacing: 0.3px;
+}
+
+/* ============ FAQ ACCORDION ============ */
+.faq-section {
+  padding: 80px 0;
+  background: var(--bg-deep);
+}
+
+.faq-list {
+  margin-top: 40px;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  padding: 20px 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  transition: color 0.2s;
+}
+
+.faq-question:hover {
+  color: var(--gold);
+}
+
+.faq-question::after {
+  content: "+";
+  font-size: 22px;
+  color: var(--gold);
+  flex-shrink: 0;
+  transition: transform 0.25s;
+}
+
+.faq-item.open .faq-question::after {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.2s;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 400px;
+  padding-bottom: 20px;
+}
+
+.faq-answer p {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ============ SOFT PRICING NUDGE ============ */
+.pricing-soft-nudge {
+  text-align: center;
+  margin-top: 32px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.pricing-soft-nudge a {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hands-on-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grad-quote-attribution {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .grad-quote-name,
+  .grad-quote-role {
+    text-align: center;
+  }
+}
