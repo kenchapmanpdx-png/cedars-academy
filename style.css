@@ -63,7 +63,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 131px;
+  scroll-padding-top: 96px;
 }
 
 body {
@@ -75,7 +75,6 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  padding-top: 34px;
 }
 
 img {
@@ -194,7 +193,7 @@ ul {
    ================================================================ */
 .nav {
   position: fixed;
-  top: 35px;
+  top: 0;
   left: 0;
   right: 0;
   z-index: 100;
@@ -2376,10 +2375,6 @@ select.form-field option {
 }
 
 /* Hero WhatsApp secondary CTA */
-.hero-whatsapp {
-  margin-top: 12px;
-  text-align: center;
-}
 
 /* ============ PRICING ANCHOR LINK ============ */
 .pricing-anchor {
@@ -2658,26 +2653,52 @@ select.form-field option {
   }
 }
 
-/* ============ BILINGUAL TOP BANNER ============ */
-.bilingual-banner {
-  background: linear-gradient(90deg, #2a1a0e 0%, #3d2410 50%, #2a1a0e 100%);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
-  text-align: center;
-  padding: 8px 16px;
+/* ============ BILINGUAL NAV TEXT ============ */
+.nav-bilingual {
+  color: var(--gold);
   font-family: var(--font-body);
   font-size: 12px;
+  font-weight: 500;
   letter-spacing: 0.5px;
-  color: var(--gold);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 101;
+  text-transform: uppercase;
+  background: rgba(212, 175, 55, 0.08);
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
 }
 
-.bilingual-banner span {
-  opacity: 0.6;
-  margin: 0 10px;
+@media (max-width: 900px) {
+  .nav-bilingual.hidden-mobile {
+    display: none;
+  }
+}
+
+/* ============ FLOATING CHAT WIDGET ============ */
+.floating-chat-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background-color: var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.floating-chat-btn:hover {
+  transform: scale(1.05);
+  background-color: var(--gold-light);
+}
+
+.floating-chat-btn svg {
+  width: 28px;
+  height: 28px;
+  fill: var(--bg-void);
 }
 
 /* ============ TEAM SECTION ============ */
